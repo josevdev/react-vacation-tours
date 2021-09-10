@@ -44,6 +44,12 @@ function App() {
       <main>
         <div className='title'>
           <h2>no tours left</h2>
+          <button
+            className='btn'
+            onClick={fetchTours}
+          >
+            Fetch Tours
+          </button>
         </div>
       </main>
     );
