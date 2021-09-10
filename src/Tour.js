@@ -4,7 +4,7 @@ const Tour = ({id, image, info, price, name, removeTour}) => {
   const [readMore, setReadMore] = useState(false);
 
   return(
-    <article>
+    <article className='single-tour'>
       <img src={image} alt={name} />
       <footer>
         <div className='tour-info'>
