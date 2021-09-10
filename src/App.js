@@ -25,6 +25,13 @@ function App() {
     }
   }
 
+  const removeTour = (id) => {
+    const newTours = tours.filter(tour => {
+      return(tour.id !== id);
+    });
+    setTours(newTours);
+  }
+
   useEffect(() => {
     fetchTours();
   }, []);
@@ -34,7 +41,10 @@ function App() {
   }
   return(
     <main>
-      <Tours tours={tours} />
+      <Tours
+        removeTour={removeTour}
+        tours={tours}
+      />
     </main>
   );
 }
